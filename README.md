@@ -10,3 +10,6 @@ Our server usually has a MCP client inside that communicates with a MCP server s
 - WebSockets
 
 The MCP [specification](https://modelcontextprotocol.io/specification) defines different types of messages that can be exchanged.
+
+MCP Flow:
+![](images/mcp-flow.png)
