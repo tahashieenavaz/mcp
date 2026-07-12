@@ -37,6 +37,7 @@ def edit_document(
     document_identifier: str = Field(
         description="The identifier of the document to edit."
     ),
+    old_content: str = Field("The old content that will be searched and replaced"),
     new_content: str = Field(
         description="The new content to be swapped with the old content of the document."
     ),
@@ -44,7 +45,9 @@ def edit_document(
     if document_identifier not in docs:
         raise ValueError(f"Document {document_identifier} was not founded.")
 
-    docs[document_identifier] = new_content
+    docs[document_identifier] = docs[document_identifier].replace(
+        old_content, new_content
+    )
 
 
 # TODO: Write a resource to return all doc id's
