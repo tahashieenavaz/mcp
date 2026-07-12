@@ -13,3 +13,5 @@ The MCP [specification](https://modelcontextprotocol.io/specification) defines d
 
 MCP Flow:
 ![](images/mcp-flow.png)
+
+Normally a project will implement either a MCP server or a MCP client, not both.
