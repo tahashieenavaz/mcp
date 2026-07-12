@@ -25,3 +25,5 @@ mcp dev mcp_server_file.py
 ```
 
 Then we will have browser access to an inspector for our MCP server.
+
+The magic of MCP tools is that you don't need to memorize or specify them. Large language models use them **whenever they are available** automatically.
