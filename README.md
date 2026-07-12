@@ -15,3 +15,13 @@ MCP Flow:
 ![](images/mcp-flow.png)
 
 Normally a project will implement either a MCP server or a MCP client, not both.
+
+<hr />
+
+In order to test our MCP server we can use **MCP Inspector**. That could be loaded using:
+
+```bash
+mcp dev mcp_server_file.py
+```
+
+Then we will have browser access to an inspector for our MCP server.
