@@ -55,3 +55,10 @@ def get_document(document_id: str):
     pass
 ```
 
+
+
+<hr />
+
+### Recap
+
+<img src="./images/recap.png" />
