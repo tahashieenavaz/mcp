@@ -50,9 +50,18 @@ def edit_document(
     )
 
 
-# TODO: Write a resource to return all doc id's
+@mcp.resource("docs://documents", mime_type="application/json")
+def list_documents() -> list[str]:
+    return list(docs.keys())
 
-# TODO: Write a resource to return the contents of a particular doc
+
+@mcp.resource("docs://documents/{document_id}", mime_type="text/plain")
+def get_document(document_id: str) -> str:
+    if document_id not in docs:
+        raise ValueError(f"Document {document_id} does not exist.")
+    return docs[document_id]
+
+
 # TODO: Write a prompt to rewrite a doc in markdown format
 # TODO: Write a prompt to summarize a doc
 
