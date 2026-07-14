@@ -27,3 +27,31 @@ mcp dev mcp_server_file.py
 Then we will have browser access to an inspector for our MCP server.
 
 The magic of MCP tools is that you don't need to memorize or specify them. Large language models use them **whenever they are available** automatically.
+
+<hr />
+
+We can define which **resources** the MCP uses when user types `@` with `@mcp.resource` decorator.
+
+Direct (Static) resource:
+
+```python
+@mcp.resource(
+    "docs://documents",
+    mime_type="application/json"
+)
+def list_documents():
+    pass
+```
+
+
+Templated (Dynamic) resource:
+
+```python
+@mcp.resource(
+    "docs://documents/{document_id}",
+    mime_type="application/json"
+)
+def get_document(document_id: str):
+    pass
+```
+
